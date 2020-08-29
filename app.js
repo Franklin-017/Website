@@ -12,7 +12,8 @@ document.addEventListener('scroll', () => {
 const hamburger = document.querySelector('.hamburger');
 const navlinks = document.querySelector('.navlinks');
 const links = document.querySelectorAll('.navlinks li');
-console.log(links);
+
+const heroSection = document.querySelector('#hero');
 
 hamburger.addEventListener('click', () => {
 	navlinks.classList.toggle('active');
@@ -26,4 +27,6 @@ hamburger.addEventListener('click', () => {
 			}s`;
 		}
 	});
+
+	hamburger.classList.toggle('toogle');
 });

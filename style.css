@@ -17,6 +17,7 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	background-color: var(--secondary-text-color);
+	overflow-x: hidden;
 }
 
 h1 {
@@ -129,12 +131,28 @@ nav {
 	width: 25px;
 	height: 3px;
 	margin: 5px;
-	background-color: #fff;
+	background-color: var(--primary-color);
 	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+div .line2 {
+	width: 20px;
+	margin-left: auto;
 }
 
 .hamburger {
 	display: none;
+}
+
+.toogle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toogle .line2 {
+	opacity: 0;
+}
+.toogle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Navbar Styling */
@@ -198,6 +216,7 @@ nav {
 
 /* Contact Section Styling */
 .contact-header {
+	padding-top: 100px;
 	text-align: center;
 }
 .contactform {
@@ -213,7 +232,7 @@ nav {
 }
 
 .text {
-	width: 60vw;
+	width: 50vw;
 	margin: 0 auto;
 	padding: 15px;
 	font-size: 1.2rem;
@@ -246,12 +265,13 @@ nav {
 footer {
 	width: 80%;
 	margin: 0 auto;
+	position: relative;
 }
 .footer_content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: 70px;
 }
 
 .social_media {
@@ -265,7 +285,22 @@ footer {
 
 .copyrights {
 	text-align: center;
-	margin: 30px 0;
+	margin: 70px 0;
+}
+
+.totop {
+	position: absolute;
+	font-size: 16px;
+	font-weight: 600;
+	right: -100px;
+	bottom: -20px;
+	background-color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	border-radius: 20px;
+	padding: 3px 8px;
+	cursor: pointer;
+	color: var(--secondary-text-color);
+	animation: blink 0.9s ease infinite 0.1s;
 }
 
 /* Footer Section Styling */
@@ -275,11 +310,18 @@ footer {
 @keyframes navLinkfade {
 	from {
 		opacity: 0;
-		transform: translateX(50px);
 	}
 	to {
 		opacity: 1;
-		transform: translateX(0px);
+	}
+}
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 
@@ -311,8 +353,8 @@ footer {
 	.navlinks {
 		position: absolute;
 		right: 0;
-		height: 90vh;
-		top: 10vh;
+		height: 91vh;
+		top: 11vh;
 		background-color: #2e2e2e;
 		display: flex;
 		flex-direction: column;
@@ -362,6 +404,12 @@ footer {
 	}
 
 	/* Service & About Section Styling */
+
+	.totop {
+		font-size: 14px;
+		right: -20px;
+		bottom: -20px;
+	}
 }
 
 /* Media Query for Mobile */
