@@ -448,15 +448,15 @@ footer {
 
 @media screen and (max-width: 569px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	h3 {
-		font-size: 2rem;
+		font-size: 1.3rem;
 	}
 
 	p {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 	}
 
 	img {
