@@ -366,12 +366,8 @@ footer {
 @media screen and (max-width: 1200px) {
 	/* General Styling for Responsive */
 
-	h1 {
-		font-size: 3.7rem;
-	}
-
 	h3 {
-		font-size: 2.7rem;
+		font-size: 2rem;
 	}
 
 	p {
@@ -452,7 +448,7 @@ footer {
 
 @media screen and (max-width: 569px) {
 	h1 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	h3 {
