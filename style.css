@@ -377,11 +377,6 @@ footer {
 	img {
 		width: 400px;
 	}
-
-	#hero,
-	#contact {
-		background-attachment: scroll;
-	}
 	/* Responsive Navbar */
 	.headercontainer {
 		background-color: #2e2e2e;
